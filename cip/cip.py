@@ -13,7 +13,7 @@ from nltk import ne_chunk, pos_tag, word_tokenize
 from nltk.tree import Tree
 
 
-class ReadCV:
+class Cip:
     def __init__(self) -> None:
         self.config: Config = c
         pass
@@ -75,7 +75,7 @@ class ReadCV:
         return res_json
 
 if __name__ == '__main__':
-    r = ReadCV()
+    r = Cip()
     
     test = r.read_file_pdf('path/file')
     print('{"test":',test,'}')
