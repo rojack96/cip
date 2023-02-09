@@ -1,6 +1,7 @@
 #internal
-from config import Config
-from config import config as c
+# from config import config as c
+from config.config import Configuration as conf
+from config.config import Config
 from extract_function import ExtractInfo
 
 #external
@@ -15,7 +16,8 @@ from nltk.tree import Tree
 
 class Cip:
     def __init__(self) -> None:
-        self.config: Config = c
+        c: conf = conf()
+        self.config: Config = c.get_config()
         pass
 
     nltk.download('punkt')
@@ -77,6 +79,6 @@ class Cip:
 if __name__ == '__main__':
     r = Cip()
     
-    test = r.read_file_pdf('path/file')
-    print('{"test":',test,'}')
+    test = r.read_file_pdf('CV_RobertoCerrone.pdf')
+    print('{\n"test":',test,' \n}')
     
