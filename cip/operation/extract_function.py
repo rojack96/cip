@@ -39,6 +39,7 @@ class ExtractInfo:
             Return name and surname
         '''
         spacy_parser = self.italian_nlp(self.text)
+        name:str = ''
 
         """
         Testing
